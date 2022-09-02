@@ -8,9 +8,11 @@ This repo contains:
 * The (Python 3.9+) [source code for beacon](beacon),
 * **A docker-less version of the B2RI**
 
-> [Local deployment instructions](deploy/README_Dockerless.md)
+> [Local installation instructions](deploy/README_Dockerless.md)
 
-A tool has been developed to allow for easy import of metadata into the mongoDB and can be found in this [repo](https://github.com/Cafe-Variome/Beacon-Import-tools).
+### Importing metadata into the Beacon-in-a-box
+
+To import metadata into your Beacon instance please use the [Beacon-import-tools](https://github.com/Cafe-Variome/Beacon-Import-tools).
 
 
 ## Usage
