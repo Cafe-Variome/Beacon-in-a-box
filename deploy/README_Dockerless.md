@@ -23,7 +23,7 @@ Install mongoDB following the instructions found here:
 
 #### Load the data
 
-Data is stored in mongoDB within collections of related JSON objects. For the use case of this implementation we will be storing metadata using the [LeHMR](https://lehmr.le.ac.uk/) [metadata model](https://www567.lamp.le.ac.uk/LeHMR_Dev/LeHMR/BeaconAPI/schema) within the "datasets" collection.
+Data is stored in mongoDB within collections of related JSON objects. For the use case of this implementation we will be storing metadata using the [EJP datasets model](https://github.com/ejp-rd-vp/vp-api-specs) .
 
 For this implementation there is no translation of the received query into fields used by the underlying DB, the data is stored within the metadata model format and all defined filters can act upon this model directly without translation.
 
