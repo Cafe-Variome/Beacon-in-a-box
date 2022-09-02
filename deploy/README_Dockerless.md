@@ -62,5 +62,10 @@ This command will print the logs and any errors to screen. Once you are happy th
 python -m beacon &> logfile.log &
 ```
 
+### Setting the Informational endpoints data content
+
+Beacon utilises a set of Informational endpoints to describe the Beacon instance itself, the contents for these endpoints
+can be set in the [conf.py](../beacon/conf.py), [filtering_terms.py](../db/filtering_terms.py) and [framework.py](../response/framework.py)
+
 
 
