@@ -27,8 +27,6 @@ routes = [
 
     web.get('/api/datasets/',
             generic_handler(db_fn=datasets.get_datasets)),
-    web.get('/api/individuals/',
-            generic_handler(db_fn=individuals.get_individuals)),
 
     ########################################
     # POST
@@ -36,7 +34,5 @@ routes = [
 
     web.post('/api/datasets/',
              generic_handler(db_fn=datasets.get_datasets)),
-    web.post('/api/individuals/',
-             generic_handler(db_fn=individuals.get_individuals)),
 
 ]

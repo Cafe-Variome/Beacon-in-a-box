@@ -56,14 +56,11 @@ You can then start the beacon with the following command:
 ```bash
 python -m beacon
 ```
-This command will print the logs and any errors to screen. Once you you are happy that your installation is working then you can redirect the logs to a log file and restart the beacon server using a shell script or by disconnecting the process from the terminal window using "&" at the end of the command.
+This command will print the logs and any errors to screen. Once you are happy that your installation is working then you can redirect the logs to a log file and restart the beacon server using a shell script or by disconnecting the process from the terminal window using "&" at the end of the command.
 
 ```
 python -m beacon &> logfile.log &
 ```
-
-
-### Setting the INFO endpoints
 
 
 
