@@ -18,8 +18,10 @@ You should have installed:
 Install mongoDB following the instructions found here:
 [https://www.mongodb.com/try/download](https://www.mongodb.com/try/download)
 
-> *optional*: Install a program to interact with your mongoDB to view and edit the DB contents, such as [mongo-express](https://github.com/mongo-express/mongo-express)
+#### Setup the database
+The easiest way to setup database is by installing [MongoDB Compass](https://www.mongodb.com/try/download/compass).
 
+After successful installation, connect to mongodb://localhost:27017 in MongoDB Compass, and create a database with name 'beacon' and collection name 'datasets'.
 
 #### Load the data
 
@@ -30,7 +32,7 @@ For this implementation there is no translation of the received query into field
 To keep the commands simple, the commands below are provided assuming no security has been added to your mongoDB installation. Adding basic security is highly recommended.
 
 ```bash
-mongoimport --jsonArray --uri "mongodb://127.0.0.1:27017/beacon" --file data/metadata*.json --collection datasets
+mongoimport --jsonArray --uri "mongodb://127.0.0.1:27017/beacon" --file data/datasets.json --collection datasets # importing example datasets
 ```
 
 The above command assumes that you have a single JSON file which contains a list of dataset objects, each of which conforms to the LeHMR metadata model.
@@ -44,22 +46,23 @@ This loads the JSON files inside of the `data` folder into the MongoDB database.
 
 #### Up the beacon
 
-Once the database is setup you can clone this repo onto your system and install all requirements.
+Once the database is setup, you can clone this repo onto your system and install all requirements.
 
 ```
-cd beacon-2.x
-pip install -r requirements.txt
+git clone https://github.com/Cafe-Variome/Beacon-in-a-box.git
+cd Beacon-in-a-box/
+pip3 install -r requirements.txt
 ```
 
 You can then start the beacon with the following command:
 
 ```bash
-python -m beacon
+python3 -m beacon
 ```
 This command will print the logs and any errors to screen. Once you are happy that your installation is working then you can redirect the logs to a log file and restart the beacon server using a shell script or by disconnecting the process from the terminal window using "&" at the end of the command.
 
 ```
-python -m beacon &> logfile.log &
+python3 -m beacon &> logfile.log &
 ```
 
 ### Setting the Informational endpoints data content
